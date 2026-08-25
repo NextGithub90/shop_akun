@@ -196,50 +196,35 @@
 
   <main>
 
-    <!-- ===== HERO BANNER CAROUSEL (U7BUY 3D Coverflow Style) ===== -->
-    <section class="hero-carousel-section">
-      <div class="hero-carousel-container" id="hero-carousel">
-        <div class="hero-carousel-track" id="carousel-track">
-          <!-- Slide 0: PUBG -->
-          <div class="hero-card is-active" data-index="0">
-            <a href="#account" class="hero-card-inner">
-              <img src="IMG/pubg.png" alt="PUBG Market" class="hero-card-img" />
-            </a>
-          </div>
-          <!-- Slide 1: ROBLOX -->
-          <div class="hero-card is-next" data-index="1">
-            <a href="#account" class="hero-card-inner">
-              <img src="IMG/roblox.png" alt="Roblox Market" class="hero-card-img" />
-            </a>
-          </div>
-          <!-- Slide 2: VALORANT -->
-          <div class="hero-card is-prev" data-index="2">
-            <a href="#account" class="hero-card-inner">
-              <img src="IMG/valorant.png" alt="Valorant Market" class="hero-card-img" />
-            </a>
-          </div>
+    <!-- ===== HERO SECTION (Lumina Interactive Liquid Video Portal) ===== -->
+    <section id="hero" class="hero-portal-section">
+      <!-- Interactive Video Background Portal -->
+      <div class="video-portal-wrapper">
+        <div class="video-portal" id="video-portal">
+          <video autoplay muted loop playsinline preload="auto" class="hero-bg-video is-active" id="hero-video-a">
+            <source src="video/video.mp4" type="video/mp4" />
+          </video>
+          <video autoplay muted loop playsinline preload="auto" class="hero-bg-video" id="hero-video-b">
+            <source src="video/video.mp4" type="video/mp4" />
+          </video>
         </div>
+        <div class="hero-overlay-radial"></div>
+        <div class="hero-bottom-fade"></div>
+      </div>
 
-        <!-- Navigation Arrows -->
-        <button class="hero-nav-btn hero-nav-prev" id="hero-prev" aria-label="Slide sebelumnya">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
-        </button>
-        <button class="hero-nav-btn hero-nav-next" id="hero-next" aria-label="Slide berikutnya">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 18l6-6-6-6" />
-          </svg>
-        </button>
+      <!-- Hero Main Content -->
+      <div class="hero-container">
 
-        <!-- Pagination Dots -->
-        <div class="hero-dots" id="hero-dots">
-          <button class="hdot active" data-idx="0" aria-label="Slide 1"></button>
-          <button class="hdot" data-idx="1" aria-label="Slide 2"></button>
-          <button class="hdot" data-idx="2" aria-label="Slide 3"></button>
-        </div>
+
+        <!-- Kinetic Shimmering Display Title -->
+        <h1 class="hero-kinetic-title">
+          ACCESS<br />THE RARE
+        </h1>
+
+
+
+
+
       </div>
     </section>
 

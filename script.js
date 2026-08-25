@@ -119,96 +119,118 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── HERO BANNER CAROUSEL (U7BUY 3D COVERFLOW) ── */
-  const heroCards = Array.from(document.querySelectorAll('.hero-card'));
-  const heroDots  = Array.from(document.querySelectorAll('.hdot'));
-  const prevBtn   = document.getElementById('hero-prev');
-  const nextBtn   = document.getElementById('hero-next');
-  const heroTrack = document.getElementById('carousel-track');
-  const heroSection = document.querySelector('.hero-carousel-section');
-  let cur = 0, timer = null;
+  /* ── LUMINA INTERACTIVE LIQUID VIDEO PORTAL & MERCURY GLOW ── */
+  const mercuryButtons = document.querySelectorAll('.btn-mercury');
 
-  function updateCoverflow(idx) {
-    if (heroCards.length === 0) return;
-    const total = heroCards.length;
-    cur = (idx + total) % total;
-    const prevIdx = (cur - 1 + total) % total;
-    const nextIdx = (cur + 1) % total;
+  let mouseX = 50, mouseY = 50;
+  let targetMouseX = 50, targetMouseY = 50;
+  let isMoving = false;
 
-    heroCards.forEach((card, i) => {
-      card.classList.remove('is-active', 'is-prev', 'is-next', 'is-hidden');
-      if (i === cur) {
-        card.classList.add('is-active');
-      } else if (i === prevIdx) {
-        card.classList.add('is-prev');
-      } else if (i === nextIdx) {
-        card.classList.add('is-next');
-      } else {
-        card.classList.add('is-hidden');
-      }
+  function updateMouseCoordinates() {
+    mouseX += (targetMouseX - mouseX) * 0.15;
+    mouseY += (targetMouseY - mouseY) * 0.15;
+
+    document.documentElement.style.setProperty('--mouse-x', `${mouseX.toFixed(2)}%`);
+    document.documentElement.style.setProperty('--mouse-y', `${mouseY.toFixed(2)}%`);
+
+    if (Math.abs(targetMouseX - mouseX) > 0.05 || Math.abs(targetMouseY - mouseY) > 0.05) {
+      requestAnimationFrame(updateMouseCoordinates);
+    } else {
+      isMoving = false;
+    }
+  }
+
+  window.addEventListener('mousemove', e => {
+    targetMouseX = (e.clientX / window.innerWidth) * 100;
+    targetMouseY = (e.clientY / window.innerHeight) * 100;
+
+    mercuryButtons.forEach(btn => {
+      const rect = btn.getBoundingClientRect();
+      const bx = ((e.clientX - rect.left) / rect.width) * 100;
+      const by = ((e.clientY - rect.top) / rect.height) * 100;
+      btn.style.setProperty('--mouse-x', `${bx}%`);
+      btn.style.setProperty('--mouse-y', `${by}%`);
     });
 
-    heroDots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === cur);
-    });
-  }
+    if (!isMoving) {
+      isMoving = true;
+      requestAnimationFrame(updateMouseCoordinates);
+    }
+  }, { passive: true });
 
-  function startTimer() {
-    clearInterval(timer);
-    timer = setInterval(() => updateCoverflow(cur + 1), 4500);
-  }
+  /* ── SEAMLESS ZERO-STUTTER DUAL VIDEO CROSSFADE LOOPER ── */
+  const videoA = document.getElementById('hero-video-a');
+  const videoB = document.getElementById('hero-video-b');
+  const heroSection = document.getElementById('hero');
 
-  // Prev / Next button clicks
-  if (prevBtn) prevBtn.addEventListener('click', () => { updateCoverflow(cur - 1); startTimer(); });
-  if (nextBtn) nextBtn.addEventListener('click', () => { updateCoverflow(cur + 1); startTimer(); });
+  if (videoA && videoB) {
+    let activeVideo = videoA;
+    let inactiveVideo = videoB;
+    let crossfadedThisCycle = false;
 
-  // Pagination dots clicks
-  heroDots.forEach((d, i) => d.addEventListener('click', () => { updateCoverflow(i); startTimer(); }));
-
-  // Clicking side cards shifts them to center
-  heroCards.forEach((card, i) => {
-    card.addEventListener('click', (e) => {
-      if (card.classList.contains('is-prev')) {
-        e.preventDefault();
-        updateCoverflow(cur - 1);
-        startTimer();
-      } else if (card.classList.contains('is-next')) {
-        e.preventDefault();
-        updateCoverflow(cur + 1);
-        startTimer();
+    // Ensure both videos start playing with muted loop
+    const ensurePlay = (video) => {
+      if (video.paused) {
+        video.play().catch(() => {});
       }
-    });
-  });
+    };
 
-  // Pause on hover
-  if (heroSection) {
-    heroSection.addEventListener('mouseenter', () => clearInterval(timer));
-    heroSection.addEventListener('mouseleave', () => startTimer());
-  }
+    videoA.addEventListener('canplay', () => ensurePlay(videoA), { once: true });
+    videoB.addEventListener('canplay', () => ensurePlay(videoB), { once: true });
+    ensurePlay(videoA);
+    ensurePlay(videoB);
 
-  // Touch Swipe on Hero
-  if (heroTrack || heroSection) {
-    const touchEl = heroTrack || heroSection;
-    let tx = 0, ty = 0;
-    touchEl.addEventListener('touchstart', e => {
-      tx = e.touches[0].clientX;
-      ty = e.touches[0].clientY;
-      clearInterval(timer);
-    }, { passive: true });
+    // Continuous loop check via requestAnimationFrame for 60fps precision
+    function checkCrossfadeLoop() {
+      if (activeVideo.duration && !isNaN(activeVideo.duration)) {
+        const timeLeft = activeVideo.duration - activeVideo.currentTime;
 
-    touchEl.addEventListener('touchend', e => {
-      const dx = tx - e.changedTouches[0].clientX;
-      const dy = ty - e.changedTouches[0].clientY;
-      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
-        updateCoverflow(dx > 0 ? cur + 1 : cur - 1);
+        // Trigger crossfade 1.0s before the end of the video
+        if (timeLeft <= 1.0 && timeLeft > 0.05 && !crossfadedThisCycle) {
+          crossfadedThisCycle = true;
+
+          // Align next video to start
+          inactiveVideo.currentTime = 0;
+          ensurePlay(inactiveVideo);
+
+          // Smoothly crossfade opacity (handled by CSS transition: opacity 1s)
+          inactiveVideo.classList.add('is-active');
+          activeVideo.classList.remove('is-active');
+
+          // Swap active/inactive references
+          const temp = activeVideo;
+          activeVideo = inactiveVideo;
+          inactiveVideo = temp;
+
+          // Reset crossfade lock after transition is complete
+          setTimeout(() => {
+            crossfadedThisCycle = false;
+          }, 1200);
+        }
       }
-      startTimer();
-    }, { passive: true });
-  }
 
-  // Initialize Coverflow Carousel
-  updateCoverflow(0);
-  startTimer();
+      requestAnimationFrame(checkCrossfadeLoop);
+    }
+
+    requestAnimationFrame(checkCrossfadeLoop);
+
+    // Smart Pause / Resume on Scroll (only when whole hero section leaves viewport)
+    if (heroSection && 'IntersectionObserver' in window) {
+      const heroVideoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            ensurePlay(videoA);
+            ensurePlay(videoB);
+          } else {
+            videoA.pause();
+            videoB.pause();
+          }
+        });
+      }, { threshold: 0.05 });
+
+      heroVideoObserver.observe(heroSection);
+    }
+  }
 
   /* ── HORIZONTAL SCROLL ARROWS (Product Rows) ── */
   document.querySelectorAll('.ss-arr').forEach(btn => {
