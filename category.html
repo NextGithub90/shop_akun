@@ -4,29 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Katalog &amp; Marketplace Game — PARE4PLAYER | Access The Rare</title>
+  <title>Kategori — PARE4PLAYER | Access The Rare</title>
   <meta name="description"
-    content="Jual beli akun game sultan terverifikasi, voucher top up instan, jersey custom esport, dan equipment gaming profesional." />
+    content="Jelajahi semua kategori produk gaming PARE4PLAYER: Jersey Esport, Akun Game, Voucher, Equipment, Boosting, Currency & Roblox." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="category.css" />
 </head>
 
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- ===== NAVBAR (Same as index) ===== -->
   <header class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="index.html" class="logo">
         <img src="IMG/Pare4Player_Wordmark_Transparent_3000px (1).png" alt="Pare4Player" height="34" />
       </a>
       <nav class="nav-menu" id="nav-menu">
-        <a href="index.html">Beranda</a>
-        <a href="category.html?cat=accounts" class="active" style="color:#FF5A36">Katalog</a>
         <a href="index.html#jersey">Jersey</a>
+        <a href="index.html#account">Akun Game</a>
         <a href="index.html#voucher">Voucher</a>
         <a href="index.html#equipment">Equipment</a>
         <a href="index.html#proses">Cara Kerja</a>
@@ -38,39 +38,24 @@
             <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
           </svg>
         </button>
-
-        <a href="https://wa.me/6281234567890?text=Halo%20Pare4Player%2C%20saya%20mau%20order%20katalog." target="_blank"
-          class="btn-wa">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
-            <path
-              d="M12 0C5.373 0 0 5.373 0 12c0 2.124.549 4.12 1.514 5.856L0 24l6.335-1.498C8.048 23.463 9.978 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.614-.476-5.148-1.317l-.369-.219-3.761.89.921-3.67-.24-.381C2.44 15.636 2 13.875 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z" />
-          </svg>
-          <span>Chat WA</span>
-        </a>
-
         <button class="hamburger" id="hamburger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
-
-    <!-- Search overlay -->
     <div class="search-bar" id="search-bar">
       <div class="search-inner">
         <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
           <circle cx="9" cy="9" r="6" stroke="#64748B" stroke-width="1.8" />
           <path d="M14 14L18 18" stroke="#64748B" stroke-width="1.8" stroke-linecap="round" />
         </svg>
-        <input type="text" placeholder="Cari game (GTA, Valorant, MLBB, Blox Fruits, Jersey)..." id="search-input"
-          autocomplete="off" />
-        <button class="search-close" id="search-close">×</button>
+        <input type="text" placeholder="Cari jersey, akun game, voucher..." id="search-input" autocomplete="off" />
+        <button class="search-close" id="search-close">x</button>
       </div>
     </div>
   </header>
 
-  <!-- ===== MOBILE SIDEBAR DRAWER ===== -->
+  <!-- Mobile Sidebar Backdrop -->
   <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
   <aside class="sidebar-drawer" id="sidebar-drawer" aria-hidden="true">
     <div class="sb-header">
@@ -84,304 +69,352 @@
         </svg>
       </button>
     </div>
-
     <div class="sb-body">
       <div class="sb-status">
         <span class="sb-status-dot"></span>
-        <span class="sb-status-text"><strong>Concierge Aktif</strong> · 09.00–22.00 WIB</span>
+        <span class="sb-status-text"><strong>Concierge Aktif</strong> 09.00-22.00 WIB</span>
       </div>
-
-      <div class="sb-section-title">PILIH KATEGORI</div>
-      <nav class="sb-nav">
-        <a href="category.html?cat=accounts" class="sb-link">
-          <div class="sb-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="6" width="20" height="12" rx="4" />
-              <path d="M6 12h4m-2-2v4" />
-              <circle cx="17" cy="10" r="1" fill="currentColor" />
-              <circle cx="15" cy="14" r="1" fill="currentColor" />
-            </svg>
-          </div>
-          <span class="sb-text">Akun Game (131)</span>
-        </a>
-        <a href="category.html?cat=topup" class="sb-link">
-          <div class="sb-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="4" width="20" height="16" rx="3" />
-              <line x1="2" y1="10" x2="22" y2="10" />
-              <path d="M6 16h3" />
-            </svg>
-          </div>
-          <span class="sb-text">Top Up &amp; Voucher (75)</span>
-        </a>
-        <a href="category.html?cat=jersey" class="sb-link">
-          <div class="sb-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path
-                d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z" />
-            </svg>
-          </div>
-          <span class="sb-text">Jersey Esport (48)</span>
-        </a>
-        <a href="category.html?cat=items" class="sb-link">
-          <div class="sb-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 18v-6a9 9 0 0118 0v6" />
-              <path
-                d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z" />
-            </svg>
-          </div>
-          <span class="sb-text">Equipment (128)</span>
-        </a>
-        <a href="category.html?cat=boosting" class="sb-link">
-          <div class="sb-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14.5 17.5L3 6V3h3l11.5 11.5" />
-              <path d="M13 19l6-6" />
-              <path d="M16 16l4 4" />
-            </svg>
-          </div>
-          <span class="sb-text">Boosting / Joki (57)</span>
-        </a>
-      </nav>
+      <div class="sb-section-title">KATEGORI</div>
+      <nav class="sb-nav" id="mobile-cat-nav"></nav>
     </div>
-
     <div class="sb-footer">
       <a href="https://wa.me/6281234567890?text=Halo%20Pare4Player%2C%20saya%20mau%20order." target="_blank"
         class="sb-btn-wa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.549 4.12 1.514 5.856L0 24l6.335-1.498C8.048 23.463 9.978 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.614-.476-5.148-1.317l-.369-.219-3.761.89.921-3.67-.24-.381C2.44 15.636 2 13.875 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z" />
+        </svg>
         <span>Chat WhatsApp Concierge</span>
       </a>
+      <div class="sb-brand-tag"><span>ACCESS THE RARE FOR THE PLAYERS</span></div>
     </div>
   </aside>
 
-  <!-- ===== DEDICATED U7BUY MARKETPLACE CATEGORY SECTION ===== -->
-  <main class="u7-page-section">
+  <!-- ===== PAGE HERO / BREADCRUMB ===== -->
+  <section class="cat-page-hero">
+    <div class="cat-page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+          </svg>
+          Home
+        </a>
+        <span class="bread-sep">></span>
+        <span class="bread-current" id="bread-current">Semua Kategori</span>
+      </div>
+      <div class="cat-hero-content">
+        <div class="cat-hero-icon" id="cat-hero-icon"></div>
+        <div>
+          <h1 class="cat-hero-title" id="cat-hero-title">Semua Kategori</h1>
+          <p class="cat-hero-desc" id="cat-hero-desc">Temukan semua produk gaming premium PARE4PLAYER</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Breadcrumb Header -->
-    <div class="u7-breadcrumb">
-      <a href="index.html" class="u7-bc-link">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+  <!-- ===== MAIN LAYOUT: SIDEBAR + PRODUCT GRID ===== -->
+  <main class="cat-layout">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="cat-sidebar" id="cat-sidebar">
+      <div class="cs-header">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
           stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-          <polyline points="9 22 9 12 15 12 15 22" />
+          <rect x="3" y="3" width="7" height="7" rx="1.5" />
+          <rect x="14" y="3" width="7" height="7" rx="1.5" />
+          <rect x="14" y="14" width="7" height="7" rx="1.5" />
+          <rect x="3" y="14" width="7" height="7" rx="1.5" />
         </svg>
-        <span>Home</span>
-      </a>
-      <span class="u7-bc-sep">›</span>
-      <span class="u7-bc-active" id="u7-bc-current">Accounts</span>
-    </div>
+        <span>Kategori</span>
+      </div>
+      <nav class="cs-nav" id="cs-nav"></nav>
 
-    <!-- Master 2-Column Hub Layout -->
-    <div class="u7-hub-layout">
+      <div class="cs-filter-block" id="cs-filter-block"></div>
 
-      <!-- Left Sidebar Categories Menu -->
-      <aside class="u7-sidebar">
-        <div class="u7-sidebar-header">
-          <h3 class="u7-sidebar-title">Categories</h3>
+      <div class="cs-wa-block">
+        <p class="cs-wa-label">Butuh bantuan memilih?</p>
+        <a href="https://wa.me/6281234567890?text=Halo%20Pare4Player%2C%20saya%20butuh%20bantuan." target="_blank"
+          class="cs-wa-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.549 4.12 1.514 5.856L0 24l6.335-1.498C8.048 23.463 9.978 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.614-.476-5.148-1.317l-.369-.219-3.761.89.921-3.67-.24-.381C2.44 15.636 2 13.875 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z" />
+          </svg>
+          Chat Concierge
+        </a>
+      </div>
+    </aside>
+
+    <!-- RIGHT CONTENT AREA -->
+    <section class="cat-content" id="cat-content">
+      <button class="mobile-filter-btn" id="mobile-filter-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="8" y1="12" x2="16" y2="12" />
+          <line x1="11" y1="18" x2="13" y2="18" />
+        </svg>
+        Filter Kategori
+        <span class="mfb-badge" id="mfb-badge"></span>
+      </button>
+
+      <div class="ct-toolbar">
+        <div class="ct-filter-tags" id="ct-filter-tags"></div>
+        <div class="ct-sort">
+          <label>Urutkan:</label>
+          <select id="sort-select">
+            <option value="default">Terpopuler</option>
+            <option value="newest">Terbaru</option>
+            <option value="hot">Hot Items</option>
+            <option value="rare">Rare Only</option>
+          </select>
         </div>
-        <nav class="u7-cat-list" id="u7-cat-list">
+      </div>
 
-          <button class="u7-cat-item" data-cat="topup">
-            <div class="u7-cat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="3" />
-                <line x1="2" y1="10" x2="22" y2="10" />
-                <path d="M6 16h3" />
-                <circle cx="17" cy="15" r="1.5" fill="currentColor" />
-              </svg>
-            </div>
-            <span class="u7-cat-label">Top Up</span>
-            <span class="u7-cat-badge">75</span>
-          </button>
+      <div class="cat-grid" id="cat-grid"></div>
 
-          <button class="u7-cat-item" data-cat="items">
-            <div class="u7-cat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-                <line x1="12" y1="22.08" x2="12" y2="12" />
-              </svg>
-            </div>
-            <span class="u7-cat-label">Items &amp; Gear</span>
-            <span class="u7-cat-badge">128</span>
-          </button>
+      <div class="cat-empty" id="cat-empty" style="display:none">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M8 15s1.5 2 4 2 4-2 4-2" />
+          <line x1="9" y1="9" x2="9.01" y2="9" />
+          <line x1="15" y1="9" x2="15.01" y2="9" />
+        </svg>
+        <h3>Tidak ada produk</h3>
+        <p>Coba pilih kategori lain atau hubungi concierge kami</p>
+        <a href="https://wa.me/6281234567890" target="_blank" class="cat-empty-btn">Chat WA -&gt;</a>
+      </div>
 
-          <button class="u7-cat-item active" data-cat="accounts">
-            <div class="u7-cat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="6" width="20" height="12" rx="4" />
-                <path d="M6 12h4m-2-2v4" />
-                <circle cx="17" cy="10" r="1" fill="currentColor" />
-                <circle cx="15" cy="14" r="1" fill="currentColor" />
-              </svg>
-            </div>
-            <span class="u7-cat-label">Accounts</span>
-            <span class="u7-cat-badge">131</span>
-          </button>
-
-          <button class="u7-cat-item" data-cat="coins">
-            <div class="u7-cat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <ellipse cx="12" cy="7" rx="9" ry="3" />
-                <path d="M3 7v6c0 1.66 4.03 3 9 3s9-1.34 9-3V7" />
-                <path d="M3 13v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6" />
-              </svg>
-            </div>
-            <span class="u7-cat-label">Coins &amp; Currency</span>
-            <span class="u7-cat-badge">50</span>
-          </button>
-
-          <button class="u7-cat-item" data-cat="boosting">
-            <div class="u7-cat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14.5 17.5L3 6V3h3l11.5 11.5" />
-                <path d="M13 19l6-6" />
-                <path d="M16 16l4 4" />
-                <path d="M19 21l2-2" />
-                <path d="M14.5 6.5L18 3h3v3l-3.5 3.5" />
-                <path d="M5 19l4-4" />
-                <path d="M3 21l2-2" />
-              </svg>
-            </div>
-            <span class="u7-cat-label">Boosting / Joki</span>
-            <span class="u7-cat-badge">57</span>
-          </button>
-
-          <button class="u7-cat-item" data-cat="jersey">
-            <div class="u7-cat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z" />
-              </svg>
-            </div>
-            <span class="u7-cat-label">Jersey Esport</span>
-            <span class="u7-cat-badge">48</span>
-          </button>
-
-          <button class="u7-cat-item" data-cat="subscription">
-            <div class="u7-cat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 11a9 9 0 0 1 9 9" />
-                <path d="M4 4a16 16 0 0 1 16 16" />
-                <circle cx="5" cy="19" r="1" />
-              </svg>
-            </div>
-            <span class="u7-cat-label">Subscription</span>
-            <span class="u7-cat-badge">17</span>
-          </button>
-
-          <button class="u7-cat-item" data-cat="roblox">
-            <div class="u7-cat-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="4" />
-                <path d="M9 9h6v6H9z" fill="currentColor" />
-              </svg>
-            </div>
-            <span class="u7-cat-label">Roblox Games</span>
-            <span class="u7-cat-badge">83</span>
-          </button>
-
-        </nav>
-      </aside>
-
-      <!-- Right Main Marketplace Content -->
-      <main class="u7-content">
-
-        <!-- Category Heading Row -->
-        <div class="u7-content-header">
-          <div class="u7-title-wrap">
-            <h1 class="u7-heading" id="u7-active-heading">Accounts</h1>
-            <span class="u7-items-count" id="u7-active-count">131 Game &amp; Produk</span>
-          </div>
-        </div>
-
-        <!-- Filter Chips & Search Toolbar -->
-        <div class="u7-toolbar">
-          <div class="u7-filters" id="u7-filter-chips">
-            <button class="u7-filter-btn active" data-filter="all">Semua</button>
-            <button class="u7-filter-btn" data-filter="hot">🔥 Hot</button>
-            <button class="u7-filter-btn" data-filter="verified">✓ Verified</button>
-            <button class="u7-filter-btn" data-filter="rare">⭐ Rare</button>
-          </div>
-
-          <div class="u7-search-box">
-            <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
-              <circle cx="9" cy="9" r="6" stroke="#64748B" stroke-width="1.8" />
-              <path d="M14 14L18 18" stroke="#64748B" stroke-width="1.8" stroke-linecap="round" />
+      <div class="cat-cta-banner">
+        <div class="ccb-content">
+          <div class="ccb-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
             </svg>
-            <input type="text" id="u7-filter-search" placeholder="Cari di kategori ini..." autocomplete="off" />
+          </div>
+          <div>
+            <h3>Tidak menemukan yang kamu cari?</h3>
+            <p>Tim concierge kami siap bantu carikan produk rare sesuai kebutuhanmu</p>
           </div>
         </div>
-
-        <!-- Gaming Cards Grid -->
-        <div class="u7-cards-grid" id="u7-cards-grid">
-          <!-- Cards rendered by category-script.js -->
-        </div>
-
-      </main>
-
-    </div>
-
+        <a href="https://wa.me/6281234567890?text=Halo%20Pare4Player%2C%20saya%20mau%20request%20produk."
+          target="_blank" class="ccb-btn">Private Request -&gt;</a>
+      </div>
+    </section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="ft-top">
-      <div class="ft-brand">
-        <img src="IMG/Pare4Player_Wordmark_Transparent_3000px (1).png" alt="Pare4Player" height="34" />
-        <p>Premium Gaming Concierge.<br />Untuk para player, kolektor &amp; trader profesional.</p>
-        <small>© 2026 PARE DIGITAL NUSANTARA · Hak Cipta Dilindungi</small>
-      </div>
-      <div class="ft-col">
-        <h4>Produk</h4>
-        <a href="category.html?cat=jersey">Jersey &amp; Apparel</a>
-        <a href="category.html?cat=accounts">Akun Game</a>
-        <a href="category.html?cat=topup">Voucher &amp; Top Up</a>
-        <a href="category.html?cat=items">Gaming Equipment</a>
-      </div>
-      <div class="ft-col">
-        <h4>Layanan</h4>
-        <a href="index.html#proses">Cara Kerja</a>
-        <a href="index.html#kontak">Private Request</a>
-        <a href="index.html#kontak">Custom Order</a>
-      </div>
-      <div class="ft-col">
-        <h4>Hubungi Kami</h4>
-        <a href="https://wa.me/6281234567890" target="_blank">WhatsApp Official</a>
-        <a href="mailto:hello@pare4player.id">Email Support</a>
-        <a href="#">Instagram Official</a>
-        <a href="#">TikTok Channel</a>
-      </div>
+  <!-- MOBILE FILTER SHEET -->
+  <div class="filter-sheet-backdrop" id="filter-sheet-backdrop"></div>
+  <div class="filter-sheet" id="filter-sheet">
+    <div class="fs-header">
+      <span>Filter Kategori</span>
+      <button class="fs-close" id="fs-close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
     </div>
-    <div class="ft-bottom">
-      <span>RARE · PREMIUM · EXCLUSIVE · FOR THE PLAYERS</span>
-      <span class="ft-rare-tag">ACCESS THE RARE</span>
+    <nav class="fs-nav" id="fs-nav"></nav>
+    <div class="fs-footer">
+      <button class="fs-apply-btn" id="fs-apply-btn">Terapkan Filter</button>
     </div>
-  </footer>
+  </div>
 
-  <!-- Floating WA -->
-  <a href="https://wa.me/6281234567890" target="_blank" class="fwa" id="fwa" title="Chat WhatsApp">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
-      <path
-        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
-      <path
-        d="M12 0C5.373 0 0 5.373 0 12c0 2.124.549 4.12 1.514 5.856L0 24l6.335-1.498C8.048 23.463 9.978 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.614-.476-5.148-1.317l-.369-.219-3.761.89.921-3.67-.24-.381C2.44 15.636 2 13.875 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z" />
+  <!-- FLOATING WA BUTTON -->
+  <a href="https://wa.me/6281234567890?text=Halo%20Pare4Player%2C%20saya%20mau%20order."
+    class="float-wa" target="_blank" aria-label="Chat WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.549 4.12 1.514 5.856L0 24l6.335-1.498C8.048 23.463 9.978 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.614-.476-5.148-1.317l-.369-.219-3.761.89.921-3.67-.24-.381C2.44 15.636 2 13.875 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z" />
     </svg>
-    <div class="fwa-ring"></div>
   </a>
 
-  <!-- Shared Script & Category Dedicated Script -->
-  <script src="script.js"></script>
   <script src="category.js"></script>
+</body>
+
+</html>
+
+  <div class="pdm-backdrop" id="pdm-backdrop"></div>
+  <div class="pdm" id="pdm" role="dialog" aria-modal="true" aria-labelledby="pdm-title">
+
+    <!-- Close Button -->
+    <button class="pdm-close" id="pdm-close" aria-label="Tutup detail produk">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+        stroke-linecap="round">
+        <path d="M18 6L6 18M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Scrollable inner -->
+    <div class="pdm-inner">
+
+      <!-- LEFT: Image Panel -->
+      <div class="pdm-left">
+        <div class="pdm-img-wrap" id="pdm-img-wrap">
+          <img src="" alt="" id="pdm-img" />
+          <div class="pdm-img-badges" id="pdm-img-badges"></div>
+          <div class="pdm-img-overlay"></div>
+        </div>
+
+        <!-- Thumbnail strip (optional decorative) -->
+        <div class="pdm-trust-row">
+          <div class="pdm-trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="M9 12l2 2 4-4" />
+            </svg>
+            <span>100% Aman</span>
+          </div>
+          <div class="pdm-trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+            <span>Proses Cepat</span>
+          </div>
+          <div class="pdm-trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+            </svg>
+            <span>Terpercaya</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Info Panel -->
+      <div class="pdm-right">
+
+        <!-- Breadcrumb inside modal -->
+        <div class="pdm-cat-label" id="pdm-cat-label"></div>
+
+        <!-- Title -->
+        <h2 class="pdm-title" id="pdm-title"></h2>
+
+        <!-- Rating Row -->
+        <div class="pdm-rating-row" id="pdm-rating-row"></div>
+
+        <!-- Price / Status -->
+        <div class="pdm-price-block" id="pdm-price-block"></div>
+
+        <!-- Divider -->
+        <hr class="pdm-divider" />
+
+        <!-- Features / Highlights -->
+        <div class="pdm-section" id="pdm-features-section">
+          <h4 class="pdm-section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 11 12 14 22 4" />
+              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+            </svg>
+            Keunggulan Produk
+          </h4>
+          <ul class="pdm-features" id="pdm-features"></ul>
+        </div>
+
+        <!-- Specs Table -->
+        <div class="pdm-section" id="pdm-specs-section">
+          <h4 class="pdm-section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="8" y1="6" x2="21" y2="6" />
+              <line x1="8" y1="12" x2="21" y2="12" />
+              <line x1="8" y1="18" x2="21" y2="18" />
+              <line x1="3" y1="6" x2="3.01" y2="6" />
+              <line x1="3" y1="12" x2="3.01" y2="12" />
+              <line x1="3" y1="18" x2="3.01" y2="18" />
+            </svg>
+            Spesifikasi
+          </h4>
+          <div class="pdm-specs-table" id="pdm-specs-table"></div>
+        </div>
+
+        <!-- Description -->
+        <div class="pdm-section">
+          <h4 class="pdm-section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg>
+            Deskripsi
+          </h4>
+          <p class="pdm-desc" id="pdm-desc"></p>
+        </div>
+
+        <!-- Process Steps -->
+        <div class="pdm-section">
+          <h4 class="pdm-section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            Cara Order
+          </h4>
+          <div class="pdm-steps">
+            <div class="pdm-step">
+              <span class="pdm-step-num">1</span>
+              <span>Klik tombol Order via WhatsApp di bawah</span>
+            </div>
+            <div class="pdm-step">
+              <span class="pdm-step-num">2</span>
+              <span>Diskusikan detail dengan tim concierge kami</span>
+            </div>
+            <div class="pdm-step">
+              <span class="pdm-step-num">3</span>
+              <span>Lakukan pembayaran sesuai konfirmasi</span>
+            </div>
+            <div class="pdm-step">
+              <span class="pdm-step-num">4</span>
+              <span>Produk dikirim / akses diberikan dalam waktu singkat</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="pdm-cta-group">
+          <a href="#" id="pdm-wa-btn" target="_blank" class="pdm-btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.549 4.12 1.514 5.856L0 24l6.335-1.498C8.048 23.463 9.978 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.614-.476-5.148-1.317l-.369-.219-3.761.89.921-3.67-.24-.381C2.44 15.636 2 13.875 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z" />
+            </svg>
+            Order via WhatsApp
+          </a>
+          <button class="pdm-btn-secondary" id="pdm-copy-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+              <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+            </svg>
+            Salin Info Produk
+          </button>
+        </div>
+
+        <!-- Guarantee note -->
+        <div class="pdm-guarantee">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          <span>Transaksi aman dengan jaminan penuh dari PARE4PLAYER Concierge</span>
+        </div>
+
+      </div><!-- /pdm-right -->
+    </div><!-- /pdm-inner -->
+  </div><!-- /pdm -->
+
+  <!-- Toast notification -->
+  <div class="pdm-toast" id="pdm-toast">Disalin ke clipboard!</div>
+
+  <script src="category.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
