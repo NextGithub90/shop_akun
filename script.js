@@ -71,16 +71,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const query = sbSearchInput.value.trim().toLowerCase();
         if (!query) return;
         closeSidebar();
-        if (query.includes('jersey') || query.includes('baju') || query.includes('hoodie')) {
+        if (query.includes('jersey') || query.includes('hoodie') || query.includes('shirt') || query.includes('tee') || query.includes('baju')) {
           document.querySelector('#jersey')?.scrollIntoView({ behavior: 'smooth' });
-        } else if (query.includes('akun') || query.includes('account') || query.includes('ml') || query.includes('val')) {
+        } else if (query.includes('account') || query.includes('akun') || query.includes('ml') || query.includes('val') || query.includes('pubg') || query.includes('ff') || query.includes('genshin')) {
           document.querySelector('#account')?.scrollIntoView({ behavior: 'smooth' });
-        } else if (query.includes('voucher') || query.includes('diamond') || query.includes('uc') || query.includes('topup')) {
+        } else if (query.includes('voucher') || query.includes('diamond') || query.includes('uc') || query.includes('topup') || query.includes('vp')) {
           document.querySelector('#voucher')?.scrollIntoView({ behavior: 'smooth' });
-        } else if (query.includes('gear') || query.includes('headset') || query.includes('mouse') || query.includes('keyboard')) {
+        } else if (query.includes('gear') || query.includes('headset') || query.includes('mouse') || query.includes('keyboard') || query.includes('chair') || query.includes('monitor') || query.includes('equipment')) {
           document.querySelector('#equipment')?.scrollIntoView({ behavior: 'smooth' });
         } else {
-          document.querySelector('#kontak')?.scrollIntoView({ behavior: 'smooth' });
+          window.location.href = 'category.html?cat=all';
         }
       }
     });
@@ -100,6 +100,27 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') searchBar.classList.remove('open');
     });
+    if (searchInput) {
+      searchInput.addEventListener('keydown', e => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          const query = searchInput.value.trim().toLowerCase();
+          if (!query) return;
+          searchBar.classList.remove('open');
+          if (query.includes('jersey') || query.includes('hoodie') || query.includes('shirt') || query.includes('tee') || query.includes('baju')) {
+            document.querySelector('#jersey')?.scrollIntoView({ behavior: 'smooth' });
+          } else if (query.includes('account') || query.includes('akun') || query.includes('ml') || query.includes('val') || query.includes('pubg') || query.includes('ff') || query.includes('genshin')) {
+            document.querySelector('#account')?.scrollIntoView({ behavior: 'smooth' });
+          } else if (query.includes('voucher') || query.includes('diamond') || query.includes('uc') || query.includes('topup') || query.includes('vp')) {
+            document.querySelector('#voucher')?.scrollIntoView({ behavior: 'smooth' });
+          } else if (query.includes('gear') || query.includes('headset') || query.includes('mouse') || query.includes('keyboard') || query.includes('chair') || query.includes('monitor') || query.includes('equipment')) {
+            document.querySelector('#equipment')?.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            window.location.href = 'category.html?cat=all';
+          }
+        }
+      });
+    }
   }
 
   /* ── SMOOTH SCROLL ── */

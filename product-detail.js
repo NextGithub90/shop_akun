@@ -5,9 +5,9 @@
    ════════════════════════════════════════════════════════════ */
 
 /* ─── HELPERS (scoped to avoid re-declaration conflict with category.js) ─── */
-const _WA = '6281234567890';
+const _WA = '628558171708';
 const _waOrder = (name) =>
-  `https://wa.me/${_WA}?text=Halo%20PARE4PLAYER%2C%20saya%20tertarik%20dengan%20produk%20*${encodeURIComponent(name)}*.%20Bisa%20info%20harga%20dan%20ketersediaan%3F`;
+  `https://wa.me/${_WA}?text=Hello%20PARE4PLAYER%2C%20I%20am%20interested%20in%20*${encodeURIComponent(name)}*.%20Can%20you%20share%20price%20and%20availability%3F`;
 
 /* ─── FIND PRODUCT FROM SHARED DATA ─── */
 function findProductById(pid) {
@@ -25,7 +25,7 @@ function findProductById(pid) {
 
 function getCategoryLabel(catKey) {
   const cat = CATEGORIES.find(c => c.id === catKey);
-  return cat ? cat.label : 'Kategori';
+  return cat ? cat.label : 'Category';
 }
 
 function getRelatedProducts(currentId, catKey, limit = 4) {
@@ -72,7 +72,7 @@ function renderProductDetail(p, catKey) {
   /* ---------- SHARE BUTTONS ---------- */
   const waShare = document.getElementById('pd-wa-share');
   if (waShare) {
-    const shareText = `Halo! Cek produk ini di PARE4PLAYER: *${p.name}* — ${window.location.href}`;
+    const shareText = `Hello! Check out this product on PARE4PLAYER: *${p.name}* — ${window.location.href}`;
     waShare.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
   }
 
@@ -102,11 +102,11 @@ function renderProductDetail(p, catKey) {
   const ratingEl = document.getElementById('pd-rating-row');
   if (ratingEl) {
     let html = `<span class="pd-stars">${starsHTML(p.stars)}</span>
-      <span class="pd-review-count">${p.reviews} ulasan</span>`;
+      <span class="pd-review-count">${p.reviews} reviews</span>`;
     if (p.verified) {
       html += `<span class="pd-verified-tag">
         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Terverifikasi P4P
+        Verified by P4P
       </span>`;
     }
     if (p.gameLabel && p.gameColor) {
@@ -115,30 +115,29 @@ function renderProductDetail(p, catKey) {
     ratingEl.innerHTML = html;
   }
 
-
   /* ---------- PRICE CARD ---------- */
   const priceEl = document.getElementById('pd-price-card');
   if (priceEl) {
     if (p.price === 'Chat WA') {
       priceEl.innerHTML = `
         <div>
-          <div class="pd-price-label">Harga</div>
-          <div class="pd-price-contact">Hubungi Concierge untuk harga terbaik</div>
+          <div class="pd-price-label">Price</div>
+          <div class="pd-price-contact">Contact Concierge for Best Price</div>
         </div>
-        <div class="pd-price-note">Harga bervariasi sesuai<br>spesifikasi & ketersediaan</div>`;
+        <div class="pd-price-note">Price varies based on<br>specifications & availability</div>`;
     } else {
       priceEl.innerHTML = `
         <div>
-          <div class="pd-price-label">Harga Mulai</div>
+          <div class="pd-price-label">Starting Price</div>
           <div class="pd-price-value">${p.price}</div>
         </div>
-        <div class="pd-price-note">Konfirmasi harga final<br>melalui WhatsApp Concierge</div>`;
+        <div class="pd-price-note">Confirm final pricing<br>via WhatsApp Concierge</div>`;
     }
   }
 
   /* ---------- DESCRIPTION ---------- */
   const descEl = document.getElementById('pd-desc');
-  if (descEl) descEl.textContent = p.desc || 'Hubungi concierge kami untuk informasi detail produk ini.';
+  if (descEl) descEl.textContent = p.desc || 'Contact our concierge for full details on this product.';
 
   /* ---------- FEATURES ---------- */
   const featSection = document.getElementById('pd-features-section');
@@ -188,7 +187,7 @@ function renderProductDetail(p, catKey) {
             <div class="pd-rel-cat">${r.cat}</div>
             <div class="pd-rel-name">${r.name}</div>
             <div class="pd-rel-price ${r.price === 'Chat WA' ? 'contact' : ''}">
-              ${r.price === 'Chat WA' ? 'Request Harga' : r.price}
+              ${r.price === 'Chat WA' ? 'Price on Request' : r.price}
             </div>
           </div>
         </a>`).join('');
@@ -202,15 +201,15 @@ function renderProductDetail(p, catKey) {
 /* ─── COPY LINK ─── */
 function copyPageLink() {
   navigator.clipboard.writeText(window.location.href).then(() => {
-    showPdToast('✓ Link produk disalin!');
+    showPdToast('✓ Product link copied!');
     const btn = document.getElementById('pd-copy-link');
     if (btn) {
-      btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Tersalin!`;
+      btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!`;
       setTimeout(() => {
-        btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Salin Link`;
+        btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Copy Link`;
       }, 2000);
     }
-  }).catch(() => showPdToast('Tidak bisa menyalin — coba manual'));
+  }).catch(() => showPdToast('Unable to copy — please copy manually'));
 }
 
 function showPdToast(msg) {
