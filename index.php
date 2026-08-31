@@ -1,3 +1,7 @@
+<?php
+$logoHref = '#';
+$searchPlaceholder = 'Search esports jerseys, game accounts, vouchers, equipment...';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,181 +21,9 @@
 
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#" class="logo">
-        <img src="IMG/Pare4Player_Wordmark_Transparent_3000px (1).png" alt="Pare4Player" height="34" />
-      </a>
-      <nav class="nav-menu" id="nav-menu">
-        <a href="#jersey">Jersey</a>
-        <a href="#account">Game Accounts</a>
-        <a href="#voucher">Vouchers</a>
-        <a href="#equipment">Equipment</a>
-        <a href="#proses">How It Works</a>
-      </nav>
-      <div class="nav-right">
-        <button class="nav-search-btn" id="nav-search-btn" aria-label="Search">
-          <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-            <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.8" />
-            <path d="M14 14L18 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
-          </svg>
-        </button>
+<?php include 'includes/navbar.php'; ?>
 
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-    <!-- Search overlay -->
-    <div class="search-bar" id="search-bar">
-      <div class="search-inner">
-        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
-          <circle cx="9" cy="9" r="6" stroke="#64748B" stroke-width="1.8" />
-          <path d="M14 14L18 18" stroke="#64748B" stroke-width="1.8" stroke-linecap="round" />
-        </svg>
-        <input type="text" placeholder="Search esports jerseys, game accounts, vouchers, equipment..." id="search-input"
-          autocomplete="off" />
-        <button class="search-close" id="search-close">×</button>
-      </div>
-    </div>
-  </header>
-
-  <!-- ===== PROFESSIONAL MOBILE SIDEBAR DRAWER ===== -->
-  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
-  <aside class="sidebar-drawer" id="sidebar-drawer" aria-hidden="true">
-    <!-- Sidebar Header -->
-    <div class="sb-header">
-      <a href="#" class="sb-logo">
-        <img src="IMG/Pare4Player_Wordmark_Transparent_3000px (1).png" alt="Pare4Player" height="28" />
-      </a>
-      <button class="sb-close" id="sb-close" aria-label="Close Menu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 6L6 18M6 6l12 12" />
-        </svg>
-      </button>
-    </div>
-
-    <div class="sb-body">
-      <!-- Active Status Badge -->
-      <div class="sb-status">
-        <span class="sb-status-dot"></span>
-        <span class="sb-status-text"><strong>Concierge Active</strong> · 09:00–22:00 WIB</span>
-      </div>
-
-      <!-- Quick Search Input inside Sidebar -->
-      <form class="sb-search-form" id="sb-search-form" onsubmit="event.preventDefault();">
-        <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
-          <circle cx="9" cy="9" r="6" stroke="#94A3B8" stroke-width="1.8" />
-          <path d="M14 14L18 18" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" />
-        </svg>
-        <input type="text" placeholder="Search jerseys, accounts, vouchers..." id="sb-search-input"
-          autocomplete="off" />
-      </form>
-
-      <!-- Nav Section 1: Main Products -->
-      <div class="sb-section-title">PRODUCT CATALOG</div>
-      <nav class="sb-nav">
-        <a href="#jersey" class="sb-link">
-          <div class="sb-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z" />
-            </svg>
-          </div>
-          <span class="sb-text">Jersey &amp; Apparel</span>
-        </a>
-        <a href="#account" class="sb-link">
-          <div class="sb-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="6" width="20" height="12" rx="4" />
-              <path d="M6 12h4m-2-2v4" />
-              <circle cx="17" cy="10" r="1" fill="currentColor" />
-              <circle cx="15" cy="14" r="1" fill="currentColor" />
-            </svg>
-          </div>
-          <span class="sb-text">Game Accounts</span>
-        </a>
-        <a href="#voucher" class="sb-link">
-          <div class="sb-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 3h12l4 6-10 12L2 9l4-6z" />
-              <path d="M2 9h20M12 21L8 9m4 12l4-12" />
-            </svg>
-          </div>
-          <span class="sb-text">Vouchers &amp; Top Up</span>
-        </a>
-        <a href="#equipment" class="sb-link">
-          <div class="sb-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 18v-6a9 9 0 0118 0v6" />
-              <path
-                d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z" />
-            </svg>
-          </div>
-          <span class="sb-text">Gaming Equipment</span>
-        </a>
-      </nav>
-
-      <!-- Nav Section 2: Services & Info -->
-      <div class="sb-section-title">SERVICES &amp; GUARANTEE</div>
-      <nav class="sb-nav">
-        <a href="#proses" class="sb-link">
-          <div class="sb-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-            </svg>
-          </div>
-          <span class="sb-text">How It Works (Rare Access)</span>
-        </a>
-        <a href="#trust" class="sb-link">
-          <div class="sb-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              <path d="M9 12l2 2 4-4" />
-            </svg>
-          </div>
-          <span class="sb-text">Security &amp; Guarantee</span>
-        </a>
-        <a href="https://wa.me/628558171708?text=Hello%20Pare4Player%2C%20I%20want%20to%20make%20a%20custom%20request."
-          target="_blank" class="sb-link">
-          <div class="sb-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polygon
-                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-          </div>
-          <span class="sb-text">Private Request / Custom</span>
-        </a>
-      </nav>
-    </div>
-
-    <!-- Sidebar Footer / CTA -->
-    <div class="sb-footer">
-      <a href="https://wa.me/628558171708?text=Hello%20Pare4Player%2C%20I%20would%20like%20to%20order." target="_blank"
-        class="sb-btn-wa">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
-          <path
-            d="M12 0C5.373 0 0 5.373 0 12c0 2.124.549 4.12 1.514 5.856L0 24l6.335-1.498C8.048 23.463 9.978 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.614-.476-5.148-1.317l-.369-.219-3.761.89.921-3.67-.24-.381C2.44 15.636 2 13.875 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z" />
-        </svg>
-        <span>Chat WhatsApp Concierge</span>
-      </a>
-
-      <div class="sb-brand-tag">
-        <span>ACCESS THE RARE · FOR THE PLAYERS</span>
-      </div>
-    </div>
-  </aside>
+<?php include 'includes/sidebar_index.php'; ?>
 
   <main>
 
@@ -230,7 +62,7 @@
     <!-- ===== CATEGORY NAVIGATION (Quick Access to Dedicated Pages) ===== -->
     <section class="cat-icons">
       <div class="ci-row">
-        <a href="category.html?cat=jersey" class="ci-item">
+        <a href="category.php?cat=jersey" class="ci-item">
           <div class="ci-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -240,7 +72,7 @@
           </div>
           <span class="ci-label">Jersey</span>
         </a>
-        <a href="category.html?cat=accounts" class="ci-item">
+        <a href="category.php?cat=accounts" class="ci-item">
           <div class="ci-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -252,7 +84,7 @@
           </div>
           <span class="ci-label">Game Accounts</span>
         </a>
-        <a href="category.html?cat=topup" class="ci-item">
+        <a href="category.php?cat=topup" class="ci-item">
           <div class="ci-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -262,7 +94,7 @@
           </div>
           <span class="ci-label">Vouchers</span>
         </a>
-        <a href="category.html?cat=items" class="ci-item">
+        <a href="category.php?cat=items" class="ci-item">
           <div class="ci-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -273,7 +105,7 @@
           </div>
           <span class="ci-label">Equipment</span>
         </a>
-        <a href="category.html?cat=boosting" class="ci-item">
+        <a href="category.php?cat=boosting" class="ci-item">
           <div class="ci-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -288,7 +120,7 @@
           </div>
           <span class="ci-label">Boosting</span>
         </a>
-        <a href="category.html?cat=coins" class="ci-item">
+        <a href="category.php?cat=coins" class="ci-item">
           <div class="ci-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -299,7 +131,7 @@
           </div>
           <span class="ci-label">Currency</span>
         </a>
-        <a href="category.html?cat=roblox" class="ci-item">
+        <a href="category.php?cat=roblox" class="ci-item">
           <div class="ci-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -309,7 +141,7 @@
           </div>
           <span class="ci-label">Roblox</span>
         </a>
-        <a href="category.html?cat=all" class="ci-item ci-item-all">
+        <a href="category.php?cat=all" class="ci-item ci-item-all">
           <div class="ci-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
@@ -334,13 +166,13 @@
         <div class="ss-nav">
           <button class="ss-arr" data-scroll="jersey-row" data-dir="-1">‹</button>
           <button class="ss-arr" data-scroll="jersey-row" data-dir="1">›</button>
-          <a href="category.html?cat=jersey" class="ss-all">View All →</a>
+          <a href="category.php?cat=jersey" class="ss-all">View All →</a>
         </div>
       </div>
 
       <div class="prow" id="jersey-row">
-        <!-- Product Cards linking to product-detail.html -->
-        <a href="product-detail.html?id=j1" class="pcard">
+        <!-- Product Cards linking to product-detail.php -->
+        <a href="product-detail.php?id=j1" class="pcard">
           <div class="pcard-img">
             <img src="IMG/81589298_497003194277936_4353456598723592192_n.jpg.jpeg" alt="Devil Stripe Jersey" />
             <span class="badge-hot">🔥 HOT</span>
@@ -352,7 +184,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span>(48)</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=j2" class="pcard">
+        <a href="product-detail.php?id=j2" class="pcard">
           <div class="pcard-img">
             <img src="IMG/81819510_497003264277929_1991857801541976064_n.jpg.jpeg" alt="Gold Grid Hoodie" />
             <span class="badge-rare">COLLECTOR</span>
@@ -363,7 +195,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span>(32)</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=j3" class="pcard">
+        <a href="product-detail.php?id=j3" class="pcard">
           <div class="pcard-img">
             <img src="IMG/75247421_452163855428537_6577748504087625728_n.jpg.jpeg" alt="Geometric Edge Hoodie" />
             <span class="badge-rare">COLLECTOR</span>
@@ -374,7 +206,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span>(27)</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=j4" class="pcard">
+        <a href="product-detail.php?id=j4" class="pcard">
           <div class="pcard-img">
             <img src="IMG/75402042_452163845428538_3824576894284595200_n.jpg.jpeg" alt="Tactical Grid Hoodie" />
           </div>
@@ -384,7 +216,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span>(19)</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=j5" class="pcard">
+        <a href="product-detail.php?id=j5" class="pcard">
           <div class="pcard-img">
             <img src="IMG/472313641_1625647298080181_4609009896057739488_n.jpg.jpeg" alt="Veni Vidi Vici Tee" />
             <span class="badge-verified">✓ VERIFIED</span>
@@ -395,7 +227,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span>(61)</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=j6" class="pcard">
+        <a href="product-detail.php?id=j6" class="pcard">
           <div class="pcard-img">
             <img src="IMG/88055687_535333090444946_5042498455423942656_n.jpg.jpeg" alt="Pare Media Classic Tee" />
           </div>
@@ -442,7 +274,7 @@
             <h4>Sourcing &amp; Curation</h4>
             <p>We source accounts matching your exact requirements</p>
           </div>
-          <a href="category.html?cat=accounts" class="svc-arrow">→</a>
+          <a href="category.php?cat=accounts" class="svc-arrow">→</a>
         </div>
         <div class="svc-card">
           <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=80&h=80&fit=crop" alt=""
@@ -451,7 +283,7 @@
             <h4>Full Verification</h4>
             <p>Ownership check, clean history, and status audit</p>
           </div>
-          <a href="category.html?cat=accounts" class="svc-arrow">→</a>
+          <a href="category.php?cat=accounts" class="svc-arrow">→</a>
         </div>
         <div class="svc-card">
           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=80&h=80&fit=crop" alt=""
@@ -460,7 +292,7 @@
             <h4>Safe Transfer</h4>
             <p>Protected escrow with transparent communication</p>
           </div>
-          <a href="category.html?cat=accounts" class="svc-arrow">→</a>
+          <a href="category.php?cat=accounts" class="svc-arrow">→</a>
         </div>
         <div class="svc-card">
           <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=80&h=80&fit=crop" alt=""
@@ -484,7 +316,7 @@
       </div>
 
       <div class="prow" id="acc-row">
-        <a href="product-detail.html?id=a1" class="pcard">
+        <a href="product-detail.php?id=a1" class="pcard">
           <div class="pcard-img">
             <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300&h=220&fit=crop&crop=center"
               alt="Mobile Legends" />
@@ -498,7 +330,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span class="pc-verify">✓ Verified</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=a2" class="pcard">
+        <a href="product-detail.php?id=a2" class="pcard">
           <div class="pcard-img">
             <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=300&h=220&fit=crop&crop=center"
               alt="Valorant" />
@@ -512,7 +344,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span class="pc-verify">✓ Verified</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=a3" class="pcard">
+        <a href="product-detail.php?id=a3" class="pcard">
           <div class="pcard-img">
             <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=300&h=220&fit=crop&crop=center"
               alt="Free Fire" />
@@ -525,7 +357,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span class="pc-verify">✓ Verified</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=a4" class="pcard">
+        <a href="product-detail.php?id=a4" class="pcard">
           <div class="pcard-img">
             <img src="https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=300&h=220&fit=crop&crop=center"
               alt="PUBG Mobile" />
@@ -538,7 +370,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span class="pc-verify">✓ Secured</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=a6" class="pcard">
+        <a href="product-detail.php?id=a6" class="pcard">
           <div class="pcard-img">
             <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=300&h=220&fit=crop&crop=center"
               alt="Gaming" />
@@ -550,7 +382,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span class="pc-verify">✓ Verified</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=a5" class="pcard">
+        <a href="product-detail.php?id=a5" class="pcard">
           <div class="pcard-img">
             <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=220&fit=crop&crop=center"
               alt="Genshin" />
@@ -603,7 +435,7 @@
       <!-- Voucher panels -->
       <div id="vp-ml" class="vpanel active">
         <div class="vgrid">
-          <a href="product-detail.html?id=v1" class="vcard" style="--vc:#1A56DB">
+          <a href="product-detail.php?id=v1" class="vcard" style="--vc:#1A56DB">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300&h=120&fit=crop&crop=top"
                 alt="ML" />
@@ -616,7 +448,7 @@
               <div class="vprice-row"><span class="vprice">Rp 20.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=v2" class="vcard" style="--vc:#1A56DB">
+          <a href="product-detail.php?id=v2" class="vcard" style="--vc:#1A56DB">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300&h=120&fit=crop&crop=top"
                 alt="ML" />
@@ -629,7 +461,7 @@
               <div class="vprice-row"><span class="vprice">Rp 40.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=v2" class="vcard hot-card" style="--vc:#1A56DB">
+          <a href="product-detail.php?id=v2" class="vcard hot-card" style="--vc:#1A56DB">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300&h=120&fit=crop&crop=top"
                 alt="ML" />
@@ -642,7 +474,7 @@
               <div class="vprice-row"><span class="vprice">Rp 59.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=v3" class="vcard" style="--vc:#1A56DB">
+          <a href="product-detail.php?id=v3" class="vcard" style="--vc:#1A56DB">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300&h=120&fit=crop&crop=top"
                 alt="ML" />
@@ -655,7 +487,7 @@
               <div class="vprice-row"><span class="vprice">Rp 115.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=v3" class="vcard" style="--vc:#1A56DB">
+          <a href="product-detail.php?id=v3" class="vcard" style="--vc:#1A56DB">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300&h=120&fit=crop&crop=top"
                 alt="ML" />
@@ -668,7 +500,7 @@
               <div class="vprice-row"><span class="vprice">Rp 229.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=c1" class="vcard" style="--vc:#1A56DB">
+          <a href="product-detail.php?id=c1" class="vcard" style="--vc:#1A56DB">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300&h=120&fit=crop&crop=top"
                 alt="ML" />
@@ -685,7 +517,7 @@
       </div>
       <div id="vp-ff" class="vpanel">
         <div class="vgrid">
-          <a href="product-detail.html?id=v4" class="vcard" style="--vc:#DC4E0A">
+          <a href="product-detail.php?id=v4" class="vcard" style="--vc:#DC4E0A">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=300&h=120&fit=crop&crop=top"
                 alt="FF" />
@@ -698,7 +530,7 @@
               <div class="vprice-row"><span class="vprice">Rp 15.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=v4" class="vcard" style="--vc:#DC4E0A">
+          <a href="product-detail.php?id=v4" class="vcard" style="--vc:#DC4E0A">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=300&h=120&fit=crop&crop=top"
                 alt="FF" />
@@ -711,7 +543,7 @@
               <div class="vprice-row"><span class="vprice">Rp 29.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=v5" class="vcard hot-card" style="--vc:#DC4E0A">
+          <a href="product-detail.php?id=v5" class="vcard hot-card" style="--vc:#DC4E0A">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=300&h=120&fit=crop&crop=top"
                 alt="FF" />
@@ -724,7 +556,7 @@
               <div class="vprice-row"><span class="vprice">Rp 70.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=v5" class="vcard" style="--vc:#DC4E0A">
+          <a href="product-detail.php?id=v5" class="vcard" style="--vc:#DC4E0A">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=300&h=120&fit=crop&crop=top"
                 alt="FF" />
@@ -737,7 +569,7 @@
               <div class="vprice-row"><span class="vprice">Rp 139.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=c2" class="vcard" style="--vc:#DC4E0A">
+          <a href="product-detail.php?id=c2" class="vcard" style="--vc:#DC4E0A">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=300&h=120&fit=crop&crop=top"
                 alt="FF" />
@@ -750,7 +582,7 @@
               <div class="vprice-row"><span class="vprice">Rp 275.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=c2" class="vcard" style="--vc:#DC4E0A">
+          <a href="product-detail.php?id=c2" class="vcard" style="--vc:#DC4E0A">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=300&h=120&fit=crop&crop=top"
                 alt="FF" />
@@ -767,7 +599,7 @@
       </div>
       <div id="vp-pubg" class="vpanel">
         <div class="vgrid">
-          <a href="product-detail.html?id=v6" class="vcard" style="--vc:#B8860B">
+          <a href="product-detail.php?id=v6" class="vcard" style="--vc:#B8860B">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=300&h=120&fit=crop&crop=top"
                 alt="PUBG" />
@@ -780,7 +612,7 @@
               <div class="vprice-row"><span class="vprice">Rp 15.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=v6" class="vcard" style="--vc:#B8860B">
+          <a href="product-detail.php?id=v6" class="vcard" style="--vc:#B8860B">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=300&h=120&fit=crop&crop=top"
                 alt="PUBG" />
@@ -793,7 +625,7 @@
               <div class="vprice-row"><span class="vprice">Rp 75.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=v6" class="vcard hot-card" style="--vc:#B8860B">
+          <a href="product-detail.php?id=v6" class="vcard hot-card" style="--vc:#B8860B">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=300&h=120&fit=crop&crop=top"
                 alt="PUBG" />
@@ -806,7 +638,7 @@
               <div class="vprice-row"><span class="vprice">Rp 149.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=c3" class="vcard" style="--vc:#B8860B">
+          <a href="product-detail.php?id=c3" class="vcard" style="--vc:#B8860B">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=300&h=120&fit=crop&crop=top"
                 alt="PUBG" />
@@ -823,7 +655,7 @@
       </div>
       <div id="vp-val" class="vpanel">
         <div class="vgrid">
-          <a href="product-detail.html?id=v7" class="vcard" style="--vc:#FF4655">
+          <a href="product-detail.php?id=v7" class="vcard" style="--vc:#FF4655">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=300&h=120&fit=crop&crop=top"
                 alt="Valorant" />
@@ -836,7 +668,7 @@
               <div class="vprice-row"><span class="vprice">Rp 55.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=v7" class="vcard" style="--vc:#FF4655">
+          <a href="product-detail.php?id=v7" class="vcard" style="--vc:#FF4655">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=300&h=120&fit=crop&crop=top"
                 alt="Valorant" />
@@ -849,7 +681,7 @@
               <div class="vprice-row"><span class="vprice">Rp 110.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=v7" class="vcard hot-card" style="--vc:#FF4655">
+          <a href="product-detail.php?id=v7" class="vcard hot-card" style="--vc:#FF4655">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=300&h=120&fit=crop&crop=top"
                 alt="Valorant" />
@@ -862,7 +694,7 @@
               <div class="vprice-row"><span class="vprice">Rp 219.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="product-detail.html?id=v7" class="vcard" style="--vc:#FF4655">
+          <a href="product-detail.php?id=v7" class="vcard" style="--vc:#FF4655">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=300&h=120&fit=crop&crop=top"
                 alt="Valorant" />
@@ -879,7 +711,7 @@
       </div>
       <div id="vp-genshin" class="vpanel">
         <div class="vgrid">
-          <a href="category.html?cat=topup" class="vcard" style="--vc:#7B5EA7">
+          <a href="category.php?cat=topup" class="vcard" style="--vc:#7B5EA7">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=120&fit=crop&crop=top"
                 alt="Genshin" />
@@ -892,7 +724,7 @@
               <div class="vprice-row"><span class="vprice">Rp 20.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="category.html?cat=topup" class="vcard" style="--vc:#7B5EA7">
+          <a href="category.php?cat=topup" class="vcard" style="--vc:#7B5EA7">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=120&fit=crop&crop=top"
                 alt="Genshin" />
@@ -905,7 +737,7 @@
               <div class="vprice-row"><span class="vprice">Rp 95.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="category.html?cat=topup" class="vcard hot-card" style="--vc:#7B5EA7">
+          <a href="category.php?cat=topup" class="vcard hot-card" style="--vc:#7B5EA7">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=120&fit=crop&crop=top"
                 alt="Genshin" />
@@ -918,7 +750,7 @@
               <div class="vprice-row"><span class="vprice">Rp 285.000</span><span class="vbuy">Buy</span></div>
             </div>
           </a>
-          <a href="category.html?cat=topup" class="vcard" style="--vc:#7B5EA7">
+          <a href="category.php?cat=topup" class="vcard" style="--vc:#7B5EA7">
             <div class="vcard-top"><img
                 src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=120&fit=crop&crop=top"
                 alt="Genshin" />
@@ -945,11 +777,11 @@
         <div class="ss-nav">
           <button class="ss-arr" data-scroll="eq-row" data-dir="-1">‹</button>
           <button class="ss-arr" data-scroll="eq-row" data-dir="1">›</button>
-          <a href="category.html?cat=items" class="ss-all">Inquiry →</a>
+          <a href="category.php?cat=items" class="ss-all">Inquiry →</a>
         </div>
       </div>
       <div class="prow" id="eq-row">
-        <a href="product-detail.html?id=e1" class="pcard">
+        <a href="product-detail.php?id=e1" class="pcard">
           <div class="pcard-img">
             <img src="https://images.unsplash.com/photo-1599669454699-248893623440?w=300&h=220&fit=crop&crop=center"
               alt="Gaming Headset" />
@@ -961,7 +793,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span>Noise Cancelling</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=e4" class="pcard">
+        <a href="product-detail.php?id=e4" class="pcard">
           <div class="pcard-img">
             <img src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=300&h=220&fit=crop&crop=center"
               alt="Mechanical Keyboard" />
@@ -973,7 +805,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span>N-Key Rollover</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=e6" class="pcard">
+        <a href="product-detail.php?id=e6" class="pcard">
           <div class="pcard-img">
             <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300&h=220&fit=crop&crop=center"
               alt="Gaming Mouse" />
@@ -985,7 +817,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span>Ergonomic</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=e7" class="pcard">
+        <a href="product-detail.php?id=e7" class="pcard">
           <div class="pcard-img">
             <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=300&h=220&fit=crop&crop=center"
               alt="Gaming Setup" />
@@ -997,7 +829,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span>Complete Kit</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=e8" class="pcard">
+        <a href="product-detail.php?id=e8" class="pcard">
           <div class="pcard-img">
             <img src="https://images.unsplash.com/photo-1585792180666-f7347c490ee2?w=300&h=220&fit=crop&crop=center"
               alt="Gaming Monitor" />
@@ -1009,7 +841,7 @@
             <div class="pc-stars">⭐⭐⭐⭐⭐ <span>IPS Panel</span></div>
           </div>
         </a>
-        <a href="product-detail.html?id=e9" class="pcard">
+        <a href="product-detail.php?id=e9" class="pcard">
           <div class="pcard-img">
             <img src="https://images.unsplash.com/photo-1612198273689-b3efec00bd96?w=300&h=220&fit=crop&crop=center"
               alt="Gaming Chair" />
@@ -1031,53 +863,9 @@
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="ft-top">
-      <div class="ft-brand">
-        <img src="IMG/Pare4Player_Wordmark_Transparent_3000px (1).png" alt="Pare4Player" height="34" />
-        <p>Premium Gaming Concierge.<br />For professional players, collectors &amp; competitive traders.</p>
-        <small>© 2026 PARE DIGITAL NUSANTARA · All Rights Reserved</small>
-      </div>
-      <div class="ft-col">
-        <h4>Products</h4>
-        <a href="category.html?cat=jersey">Jersey &amp; Apparel</a>
-        <a href="category.html?cat=accounts">Game Accounts</a>
-        <a href="category.html?cat=topup">Vouchers &amp; Top Up</a>
-        <a href="category.html?cat=items">Gaming Equipment</a>
-      </div>
-      <div class="ft-col">
-        <h4>Services</h4>
-        <a href="#proses">How It Works</a>
-        <a href="https://wa.me/628558171708?text=Hello%20PARE4PLAYER%2C%20I%20would%20like%20to%20submit%20a%20private%20request."
-          target="_blank">Private Request</a>
-        <a href="https://wa.me/628558171708?text=Hello%20PARE4PLAYER%2C%20I%20am%20interested%20in%20a%20custom%20order."
-          target="_blank">Custom Order</a>
-      </div>
-      <div class="ft-col">
-        <h4>Contact Us</h4>
-        <a href="https://wa.me/628558171708" target="_blank">WhatsApp Official (+62 855-8171-708)</a>
-        <a href="mailto:hello@pare4player.id">Email Support</a>
-        <a href="#">Instagram Official</a>
-        <a href="#">TikTok Channel</a>
-      </div>
-    </div>
-    <div class="ft-bottom">
-      <span>RARE · PREMIUM · EXCLUSIVE · FOR THE PLAYERS</span>
-      <span class="ft-rare-tag">ACCESS THE RARE</span>
-    </div>
-  </footer>
+<?php include 'includes/footer.php'; ?>
 
-  <!-- Floating WA -->
-  <a href="https://wa.me/628558171708" target="_blank" class="fwa" id="fwa" title="Chat WhatsApp">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
-      <path
-        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
-      <path
-        d="M12 0C5.373 0 0 5.373 0 12c0 2.124.549 4.12 1.514 5.856L0 24l6.335-1.498C8.048 23.463 9.978 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.85 0-3.614-.476-5.148-1.317l-.369-.219-3.761.89.921-3.67-.24-.381C2.44 15.636 2 13.875 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z" />
-    </svg>
-    <div class="fwa-ring"></div>
-  </a>
+<?php include 'includes/fwa_button.php'; ?>
 
   <script src="script.js"></script>
 </body>
